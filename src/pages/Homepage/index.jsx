@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import NavBar from "../../components/NavBar";
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
@@ -13,13 +13,32 @@ import wave from "../../assets/images/wave.jpg";
 // Project images
 import shuttlelaneLogo from "../../assets/images/projects/shuttlelane/logo.png";
 import NewProjectForm from "../../forms/NewProjectForm";
+import LocomotiveScroll from "locomotive-scroll";
 
 MouseFollower.registerGSAP(gsap);
 const cursor = new MouseFollower();
 
 export default function Homepage() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      // Additional options can be added here
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
+
   return (
-    <div className="bg-[#FFF]">
+    <div
+      className="bg-[#FFF] scroll-container"
+      data-scroll-container
+      ref={scrollRef}
+    >
       <NavBar />
       <div className="mt-16">
         {/* Hero section */}

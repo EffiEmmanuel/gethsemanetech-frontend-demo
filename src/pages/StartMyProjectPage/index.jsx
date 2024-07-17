@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import NewProjectForm from "../../forms/NewProjectForm";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 
 // Images
 import wave from "../../assets/images/wave.jpg";
+import LocomotiveScroll from "locomotive-scroll";
 
 function StartMyProjectPage() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      // Additional options can be added here
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
+
   return (
-    <div className="">
+    <div
+      className="bg-[#FFF] scroll-container"
+      data-scroll-container
+      ref={scrollRef}
+    >
       <NavBar />
       <div className="bg-[#FFF] relative text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-10 lg:pb-24">
         <div className="flex flex-col">
