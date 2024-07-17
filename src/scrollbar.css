@@ -1,0 +1,27 @@
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Adjust the color and opacity as needed */
+  border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the color and opacity on hover */
+}

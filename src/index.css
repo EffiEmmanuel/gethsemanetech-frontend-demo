@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "locomotive-scroll/dist/locomotive-scroll.min.css";
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-Light.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-Light.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-Light.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-LightItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-LightItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-LightItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-Regular.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-Regular.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-Regular.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-RegularItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-RegularItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-RegularItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-Medium.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-Medium.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-Medium.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-MediumItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-MediumItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-MediumItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-SemiBold.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-SemiBold.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-SemiBold.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-SemiBoldItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-SemiBoldItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-SemiBoldItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-Bold.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-Bold.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-Bold.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-BoldItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-BoldItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-BoldItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-Heavy.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-Heavy.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-Heavy.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./assets/fonts/matter/Matter-HeavyItalic.eot") format("eot"),
+    url("./assets/fonts/matter/Matter-HeavyItalic.ttf") format("truetype"),
+    url("./assets/fonts/matter/Matter-HeavyItalic.woff") format("woff"),
+    url("./assets/fonts/matter/Matter-HeavyItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Usual Font Family */
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Light\ Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Medium\ Italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/Bold\ Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Usual";
+  src: url("./assets/fonts/usual/ExtraBold\ Italic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Gilroy Font Family */
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/gilroy/Gilroy-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+* {
+  font-family: "Gilroy";
+}
+
+/* Custom styles */
+.maxContent {
+  width: max-content;
+}
+
+/* Navbar animation */
+.rec1,
+.rec2,
+.rec3,
+.rec4 {
+  /* transform: translateY(-100%); */
+  z-index: 40;
+}
+
+/* Open animations */
+.rec1OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 0s forwards;
+}
+.rec2OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 0.2s forwards;
+}
+.rec3OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 0.4s forwards;
+}
+.rec4OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 0.6s forwards;
+}
+.rec5OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 1.4s forwards;
+}
+.rec6OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 1.6s forwards;
+}
+.rec7OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 1.8s forwards;
+}
+.rec8OpenAnimation {
+  animation: navbarOpenAnimation 0.6s ease-in 2s forwards;
+}
+
+/* Close animations */
+.rec1CloseAnimation {
+  animation: fadeOut 0.8s ease-in 0.6s forwards !important;
+}
+.rec2CloseAnimation {
+  animation: fadeOut 0.8s ease-in 0.6s forwards !important;
+}
+.rec3CloseAnimation {
+  animation: fadeOut 0.8s ease-in 0.6s forwards !important;
+}
+.rec4CloseAnimation {
+  animation: fadeOut 0.8s ease-in 0.6s forwards !important;
+}
+.rec5CloseAnimation {
+  animation: navbarCloseAnimation 0.8s ease-in 0.8s forwards !important;
+}
+.rec6CloseAnimation {
+  animation: navbarCloseAnimation 0.8s ease-in 1s forwards !important;
+}
+.rec7CloseAnimation {
+  animation: navbarCloseAnimation 0.8s ease-in 1.2s forwards !important;
+}
+.rec8CloseAnimation {
+  animation: navbarCloseAnimation 0.8s ease-in 1.4s forwards !important;
+}
+
+.navbarContentAnimation {
+  animation: navbarContentAnimation 0.8s ease-in 2.5s forwards;
+}
+
+.navbarContentCloseAnimation {
+  animation: navbarContentCloseAnimation 0.8s ease-in 0s forwards;
+}
+
+.blackBgOpenAnimation {
+  animation: fadeIn 0.8s ease-in 0s forwards;
+}
+
+.blackBgCloseAnimation {
+  animation: fadeOut 0.8s ease-in 0.8s forwards;
+}
+
+@keyframes navbarOpenAnimation {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes navbarCloseAnimation {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+@keyframes navbarContentAnimation {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+    z-index: 12;
+    background-color: white;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+    display: flex;
+  }
+  100% {
+    opacity: 0%;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    display: none;
+  }
+  100% {
+    opacity: 100%;
+    display: flex;
+  }
+}
+
+@keyframes navbarContentCloseAnimation {
+  0% {
+    opacity: 100%;
+    display: flex;
+    z-index: 12;
+    background-color: white;
+  }
+  100% {
+    opacity: 0%;
+    z-index: -1;
+    background-color: transparent;
+    display: none;
+  }
+}
+
+/* Hero background */
+.heroBg {
+  background: url("./assets/images/circle-blur.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+}
+
+/* Font */
+.fontMatter {
+  font-family: "Matter";
+}
+
+/* Footer animation */
+.footerAnimationContainer canvas {
+  height: 615px;
+}
