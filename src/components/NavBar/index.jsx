@@ -19,10 +19,12 @@ function NavBar(props) {
   return (
     <div className="relative z-[30] w-full px-7 lg:px-14 pt-7">
       <div className="w-full flex items-center justify-between">
-        <img
-          src={gethsemaneTechLogo}
-          className="max-w-[110px] w-[110px] object-contain"
-        />
+        <Link to="/">
+          <img
+            src={gethsemaneTechLogo}
+            className="max-w-[110px] w-[110px] object-contain"
+          />
+        </Link>
 
         <div className="flex items-center gap-x-5">
           <div className="lg:flex flex-row items-center gap-x-5 hidden">
@@ -44,19 +46,19 @@ function NavBar(props) {
               )}
             </div> */}
             <Link
-              to="/"
+              to="/company/contact-us"
               className="text-sm font-medium hover:text-gethsemaneRed transition-all"
             >
               Start my project
             </Link>
             <Link
-              to="/"
+              to="/company/about-us"
               className="text-sm font-medium hover:text-gethsemaneRed transition-all"
             >
               About us
             </Link>
             <Link
-              to="/"
+              to="/company/blog"
               className="text-sm font-medium hover:text-gethsemaneRed transition-all"
             >
               Blog
@@ -155,7 +157,7 @@ function NavBar(props) {
           detachAnimation ? "navbarContentCloseAnimation" : ""
         } transition-all w-full z-[9] left-0 fixed top-0 right-0 shadow-md min-h-screen py-7 px-7 lg:px-14`}
       >
-        <Fade duration={1000} delay={3200} className="w-full">
+        <Fade duration={1000} delay={3200} className="w-full relative z-[20]">
           <div className="w-full flex items-center justify-between">
             <img
               src={gethsemaneTechLogo}
@@ -175,6 +177,61 @@ function NavBar(props) {
                 </button>
               </div>
             </button>
+          </div>
+        </Fade>
+
+        <Fade duration={1000} delay={3500}>
+          <div className="absolute z-[10] top-0 left-0 right-0 flex justify-center w-full h-[100%] items-center">
+            <div className="flex flex-col gap-y-7 items-center">
+              <Link
+                to="/company/contact-us"
+                className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
+              >
+                Start my project
+              </Link>
+              <Link
+                to="/company/about-us"
+                className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
+              >
+                About us
+              </Link>
+              <Link
+                to="/company/blog"
+                className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
+              >
+                Blog
+              </Link>
+              <Link
+                to="mailto:@gethsemanestech@gmail.com"
+                className="text-2xl font-medium hover:translate-x-1 text-gethsemaneRed"
+              >
+                info@gethsemanetech.com
+              </Link>
+            </div>
+
+            <div className="absolute bottom-10 left-0 right-0 w-full flex flex-col items-center gap-y-2">
+              <p className="text-xs">
+                Copyright &copy; 2024. Gethsemane Technologies
+              </p>
+
+              <div className="flex items-center gap-x-4">
+                <Link to="/" className="text-xs">
+                  LinkedIn
+                </Link>
+                <span to="/" className="text-xs">
+                  |
+                </span>
+                <Link to="/" className="text-xs">
+                  Instagram
+                </Link>
+                <span to="/" className="text-xs">
+                  |
+                </span>
+                <Link to="/" className="text-xs">
+                  Twitter (X)
+                </Link>
+              </div>
+            </div>
           </div>
         </Fade>
       </div>

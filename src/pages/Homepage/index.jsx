@@ -150,10 +150,12 @@ export default function Homepage() {
 
               <div className="flex lg:flex-row lg:justify-between gap-7 flex-col mt-8 pb-10">
                 <div className="flex lg:flex-row gap-3 flex-col lg:w-1/3 w-full">
-                  <h2 className="text-gethsemaneRed">1.</h2>
+                  <h2 className="text-gethsemaneRed text-xl font-medium">1.</h2>
 
                   <div className="flex-col flex gap-y-2">
-                    <h2 className="text-white">Rockstar Team</h2>
+                    <h2 className="text-white text-xl font-medium">
+                      Rockstar Team
+                    </h2>
                     <p className="font-light">
                       At Gethsemane Technologies, we've got a rockstar squad
                       packed with insanely talented web, graphic, and motion
@@ -166,11 +168,14 @@ export default function Homepage() {
                     </p>
                   </div>
                 </div>
+
                 <div className="flex lg:flex-row gap-3 flex-col lg:w-1/3 w-full">
-                  <h2 className="text-gethsemaneRed">2.</h2>
+                  <h2 className="text-gethsemaneRed text-xl font-medium">2.</h2>
 
                   <div className="flex-col flex gap-y-2">
-                    <h2 className="text-white">Effective Communication</h2>
+                    <h2 className="text-white text-xl font-medium">
+                      Effective Communication
+                    </h2>
                     <p className="font-light">
                       Communication is the key to any successful relationship.
                       Here at Gethsemane Technologies, we prioritize prompt
@@ -185,10 +190,12 @@ export default function Homepage() {
                 </div>
 
                 <div className="flex lg:flex-row gap-3 flex-col lg:w-1/3 w-full">
-                  <h2 className="text-gethsemaneRed">3.</h2>
+                  <h2 className="text-gethsemaneRed text-xl font-medium">3.</h2>
 
                   <div className="flex-col flex gap-y-2">
-                    <h2 className="text-white">Realizing Your Vision</h2>
+                    <h2 className="text-white text-xl font-medium">
+                      Realizing Your Vision
+                    </h2>
                     <p className="font-light">
                       Members of our team have robust technical backgrounds in
                       Open Source, DevOps, and SaaS domains. This expertise

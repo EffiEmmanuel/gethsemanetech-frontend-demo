@@ -357,7 +357,7 @@
     display: none;
   }
   100% {
-    display: flex;
+    display: block;
     z-index: 12;
     background-color: white;
   }
