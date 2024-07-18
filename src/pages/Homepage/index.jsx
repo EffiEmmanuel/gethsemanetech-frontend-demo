@@ -232,7 +232,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="p-7 lg:px-14 pt-32 pb-3">
+            <div className="lg:px-14 pt-32 pb-3">
               <ThirdPartyIntegrations darkBg={true} />
             </div>
           </div>

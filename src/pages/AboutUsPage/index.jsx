@@ -133,7 +133,7 @@ function AboutUsPage() {
           </div>
         </div>
 
-        <div className="px-7">
+        <div className="lg:px-7">
           <TechStack />
         </div>
       </div>
