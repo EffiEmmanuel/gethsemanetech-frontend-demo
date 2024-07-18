@@ -26,7 +26,7 @@ export default function Footer() {
 
       <div className="flex flex-col gap-y-7 w-full mt-7">
         <Link
-          to="https://linkedin.com/in/gethsemane-technologies-ltd"
+          to="https://linkedin.com/company/gethsemane-tech"
           target="_blank"
           className="font-matter lg:px-14 px-7 flex items-center justify-between w-full pb-3 border-b-[0.1px] border-b-white"
         >
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="flex lg:flex-row lg:items-center lg:justify-between flex-col gap-3 mt-7 lg:px-14 px-7">
         <div className="flex lg:flex-row flex-col gap-y-4 lg:items-center gap-x-3">
           <Link
-            to="mailto:@gethsemanestech@gmail.com"
+            to="mailto:@info@gethsemanestech.com"
             target="_blank"
             className="font-matter text-sm h-10 w-52 p-4 border-white border-[0.2px] flex items-center justify-center rounded-full"
           >

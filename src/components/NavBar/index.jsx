@@ -29,8 +29,9 @@ function NavBar(props) {
             </Link>
 
             <div className="flex items-center gap-x-5">
-              <div className="lg:flex flex-row items-center gap-x-5 hidden">
-                {/* <div
+              <nav className="">
+                <ul className="lg:flex flex-row items-center gap-x-5 hidden">
+                  {/* <div
               className="relative"
               onMouseOver={() => {
                 setIsServicesActive(true);
@@ -47,31 +48,44 @@ function NavBar(props) {
                 </Fade>
               )}
             </div> */}
-                <Link
-                  to="/company/contact-us"
-                  className="text-md font-medium hover:text-gethsemaneRed transition-all"
-                >
-                  Start my project
-                </Link>
-                <Link
-                  to="/company/about-us"
-                  className="text-md font-medium hover:text-gethsemaneRed transition-all"
-                >
-                  About us
-                </Link>
-                <Link
-                  to="/company/blog"
-                  className="text-md font-medium hover:text-gethsemaneRed transition-all"
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="mailto:@info@gethsemanetech.com"
-                  className="text-md font-medium text-gethsemaneRed"
-                >
-                  info@gethsemanetech.com
-                </Link>
-              </div>
+
+                  <li>
+                    <Link
+                      to="/company/contact-us"
+                      className="text-md font-medium hover:text-gethsemaneRed transition-all"
+                    >
+                      Start my project
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      to="/company/about-us"
+                      className="text-md font-medium hover:text-gethsemaneRed transition-all"
+                    >
+                      About us
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      to="/company/blog"
+                      className="text-md font-medium hover:text-gethsemaneRed transition-all"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      to="mailto:@info@gethsemanetech.com"
+                      className="text-md font-medium text-gethsemaneRed"
+                    >
+                      info@gethsemanetech.com
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
               <button
                 onClick={() => {
                   setAttachAnimation(true);
