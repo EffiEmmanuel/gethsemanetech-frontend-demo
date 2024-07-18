@@ -15,7 +15,7 @@ import postgresql from "../../assets/images/tech-stack/postgre.svg";
 
 function TechStack() {
   return (
-    <div className="bg-white text-gethsemaneBlack rounded-[30px] p-7 w-full mt-14">
+    <div className="bg-white text-gethsemaneBlack rounded-[30px] p-7 w-full mt-14 overflow-hidden">
       <div className="flex w-full flex-col lg:px-12">
         <div className="flex flex-col">
           <Fade duration={700}>
@@ -29,7 +29,7 @@ function TechStack() {
           </Fade>
         </div>
 
-        <div className="flex flex-row flex-wrap items-center lg:justify-normal justify-center gap-x-7 mt-10 lg:mt-0">
+        <div className="w-full flex flex-row flex-wrap items-center lg:justify-normal justify-center gap-x-7 mt-10 lg:mt-0">
           <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img
               src={javascript}
