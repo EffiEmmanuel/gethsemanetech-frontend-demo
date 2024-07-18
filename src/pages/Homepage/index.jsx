@@ -14,6 +14,8 @@ import wave from "../../assets/images/wave.jpg";
 import shuttlelaneLogo from "../../assets/images/projects/shuttlelane/logo.png";
 import NewProjectForm from "../../forms/NewProjectForm";
 import LocomotiveScroll from "locomotive-scroll";
+import ThirdPartyIntegrations from "../../components/ThirdPartyIntegrations";
+import TechStack from "../../components/TechStack";
 
 MouseFollower.registerGSAP(gsap);
 const cursor = new MouseFollower();
@@ -40,10 +42,10 @@ export default function Homepage() {
       ref={scrollRef}
     >
       <NavBar />
-      <div className="mt-16">
+      <div className="mt-28 lg:mt-16">
         {/* Hero section */}
         <div className="relative w-full overflow-hidden">
-          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[70vh] mt-12 lg:relative lg:top-6">
+          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[70vh] mt-12 lg:relative lg:top-20">
             <Fade
               duration={1000}
               direction="up"
@@ -105,7 +107,7 @@ export default function Homepage() {
 
         <div data-scroll-section className="bg-[#FFF]">
           {/* About section */}
-          <div className="min-h-screen lg:min-h-[800px] relative -top-32 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-[30px] w-full pt-24 p-7 lg:px-14">
+          <div className="min-h-screen lg:min-h-[800px] relative -top-32 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-tr-[30px] rounded-tl-[30px] w-full pt-24 p-7 lg:px-14">
             <div className="lg:w-[50%] lg:inline-block hidden overflow-hidden">
               <Fade duration={700}>
                 <video
@@ -153,7 +155,7 @@ export default function Homepage() {
           </div>
 
           {/* About section continued */}
-          <div className="mt-12 min-h-screen lg:min-h-[800px] relative -top-48 bg-gethsemaneBlack flex gap-x-24 flex-row items-center justify-between text-white rounded-[30px] w-full p-7 lg:px-14 pt-14 pb-32 lg:pb-0">
+          <div className="mt-12 min-h-screen lg:min-h-[800px] relative -top-48 bg-gethsemaneBlack flex gap-x-24 flex-col items-center justify-center text-white rounded-br-[30px] rounded-bl-[30px] w-full p-7 lg:px-14 pt-14 pb-32">
             <div className="flex w-full flex-col lg:px-12 gap-y-3">
               <div className="flex flex-col">
                 <Fade duration={700}>
@@ -228,6 +230,10 @@ export default function Homepage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="p-7 lg:px-14 pt-32 pb-3">
+              <ThirdPartyIntegrations darkBg={true} />
             </div>
           </div>
 

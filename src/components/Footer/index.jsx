@@ -1,22 +1,27 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="lg:min-h-screen relative bg-black gap-x-24 text-white w-full py-20 pb-20 rounded-tr-[30px] lg:rounded-tr-[30px] rounded-tl-[30px] lg:rounded-tl-[30px]">
+    <div className="lg:min-h-[104vh] relative bg-black gap-x-24 text-white w-full py-20 pb-20 rounded-tr-[30px] lg:rounded-tr-[30px] rounded-tl-[30px] lg:rounded-tl-[30px]">
       <div className="w-full min-h-[200px] flex flex-col gap-y-4 lg:flex-row lg:items-center p-7 lg:px-14 gap-x-4">
-        <h2 className="lg:text-[4rem] text-[2.1rem] text-white lg:text-center w-full">
-          Let's have a chat <br />
-          <Link
-            to="/company/contact-us"
-            className="w-full text-gethsemaneRed flex flex-row items-center lg:justify-center gap-x-2"
-          >
-            <span className="lg:text-center">Get in touch</span>
-            <FaArrowRight size={24} className="-rotate-45" />
-          </Link>
-        </h2>
+        <Fade direction="up" duration={1000} className="inline-block w-full">
+          <h2 className="lg:text-[4rem] text-[2.1rem] text-white lg:text-center w-full">
+            Let's have a chat <br />
+            <Fade duration={1000} delay={200} className="inline-block w-full">
+              <Link
+                to="/company/contact-us"
+                className="w-full text-gethsemaneRed flex flex-row items-center lg:justify-center gap-x-2"
+              >
+                <span className="lg:text-center">Get in touch</span>
+                <FaArrowRight size={24} className="-rotate-45" />
+              </Link>
+            </Fade>
+          </h2>
+        </Fade>
       </div>
 
       <div className="flex flex-col gap-y-7 w-full mt-7">

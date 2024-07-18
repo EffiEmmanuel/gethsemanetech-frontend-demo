@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 // Images
 import wave from "../../assets/images/wave.jpg";
 import LocomotiveScroll from "locomotive-scroll";
+import { Fade } from "react-awesome-reveal";
 
 function StartMyProjectPage() {
   const scrollRef = useRef(null);
@@ -29,19 +30,43 @@ function StartMyProjectPage() {
       ref={scrollRef}
     >
       <NavBar />
-      <div className="bg-[#FFF] relative text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-10 lg:pb-24">
+      <div className="bg-[#FFF] text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-20 lg:pb-48 relative top-20">
         <div className="flex flex-col">
           <h2 className="lg:text-[3rem] text-4xl lg:leading-[60px] leading-[30px]">
-            <span className="text-gethsemaneRed lg:text-[3rem] text-3xl italic font-light">
-              Hey!{" "}
-            </span>
-            Tell us about <br />
-            your project{" "}
-            <img
-              src={wave}
-              alt="Hey! Tell us about your project"
-              className="inline-block lg:w-12 w-6"
-            />
+            <Fade
+              direction="up"
+              duration={700}
+              delay={100}
+              className="inline-block"
+            >
+              <span className="text-gethsemaneRed lg:text-[3rem] text-3xl italic font-light mr-3">
+                Hey!{" "}
+              </span>
+            </Fade>
+            <Fade
+              direction="up"
+              duration={700}
+              delay={400}
+              className="inline-block"
+            >
+              Tell us about
+            </Fade>
+            <br />
+            <Fade
+              direction="up"
+              duration={700}
+              delay={600}
+              className="inline-block"
+            >
+              your project
+            </Fade>{" "}
+            <Fade duration={700} delay={800} className="inline-block">
+              <img
+                src={wave}
+                alt="Hey! Tell us about your project"
+                className="inline-block lg:w-12 w-6"
+              />
+            </Fade>
           </h2>
         </div>
 
