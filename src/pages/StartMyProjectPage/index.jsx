@@ -30,7 +30,7 @@ function StartMyProjectPage() {
       ref={scrollRef}
     >
       <NavBar />
-      <div className="bg-[#FFF] text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-20 lg:pb-48 relative top-20">
+      <div className="bg-[#FFF] text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-48 relative top-20">
         <div className="flex flex-col">
           <h2 className="lg:text-[3rem] text-4xl lg:leading-[60px] leading-[30px]">
             <Fade
