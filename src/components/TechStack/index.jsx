@@ -30,58 +30,58 @@ function TechStack() {
         </div>
 
         <div className="flex flex-row flex-wrap items-center lg:justify-normal justify-center gap-x-7 mt-10 lg:mt-0">
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img
               src={javascript}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img
               src={typescript}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img
               src={reactjs}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img src={redux} alt="" className="w-full h-full object-contain" />
           </div>
-          <div className="h-[130px] lg:h-[150px] w-auto">
+          <div className="h-[130px] lg:h-[150px] maxWidthContent">
             <img
               src={tailwind}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[80px] lg:h-[100px] w-auto">
+          <div className="h-[80px] lg:h-[100px] maxWidthContent">
             <img src={nodejs} alt="" className="w-full h-full object-contain" />
           </div>
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img src={java} alt="" className="w-full h-full object-contain" />
           </div>
-          <div className="h-[55px] lg:h-[75px] w-auto">
+          <div className="h-[55px] lg:h-[75px] maxWidthContent">
             <img
               src={springboot}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[90px] lg:h-[110px] w-auto">
+          <div className="h-[90px] lg:h-[110px] maxWidthContent">
             <img
               src={mongodb}
               alt=""
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="h-[45px] lg:h-[65px] w-auto">
+          <div className="h-[45px] lg:h-[65px] maxWidthContent">
             <img
               src={postgresql}
               alt=""

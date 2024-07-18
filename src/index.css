@@ -417,3 +417,8 @@
 .footerAnimationContainer canvas {
   height: 615px;
 }
+
+/* Max width: content */
+.maxWidthContent {
+  width: max-content;
+}
