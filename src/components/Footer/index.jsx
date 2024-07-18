@@ -8,10 +8,10 @@ export default function Footer() {
   return (
     <div className="lg:min-h-[104vh] relative bg-black gap-x-24 text-white w-full py-20 pb-20 rounded-tr-[30px] lg:rounded-tr-[30px] rounded-tl-[30px] lg:rounded-tl-[30px]">
       <div className="w-full min-h-[200px] flex flex-col gap-y-4 lg:flex-row lg:items-center p-7 lg:px-14 gap-x-4">
-        <Fade direction="up" duration={1000} className="inline-block w-full">
+        <Fade direction="up" duration={700} className="inline-block w-full">
           <h2 className="lg:text-[4rem] text-[2.1rem] text-white lg:text-center w-full">
             Let's have a chat <br />
-            <Fade duration={1000} delay={200} className="inline-block w-full">
+            <Fade duration={700} delay={100} className="inline-block w-full">
               <Link
                 to="/company/contact-us"
                 className="w-full text-gethsemaneRed flex flex-row items-center lg:justify-center gap-x-2"
