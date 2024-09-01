@@ -43,7 +43,7 @@ function ThirdPartyIntegrations(props) {
           {/* Hosting platforms */}
           <div className="flex lg:flex-row flex-col lg:justify-between gap-7 mt-7">
             <div className="flex flex-col flex-wrap lg:flex-row items-center gap-5">
-              <div className="flex lg:flex-row flex-col lg:items-center gap-5">
+              <div className="flex lg:flex-row flex-col lg:items-center gap-7">
                 {/* Vercel */}
                 <div className="p-7 min-h-[250px] h-[250px] w-full md:w-[250px] md:min-w-[250px] rounded-lg bg-[#1A1A1A] flex flex-col justify-center gap-y-10">
                   <div className="w-[120px]">
@@ -76,7 +76,7 @@ function ThirdPartyIntegrations(props) {
                 </div>
               </div>
 
-              <div className="w-full lg:w-auto flex lg:flex-row flex-col items-center gap-5">
+              <div className="w-full lg:w-auto flex lg:flex-row flex-col items-center gap-7">
                 {/* AWS */}
                 <div className="p-7 min-h-[250px] h-[250px] w-full md:w-[250px] md:min-w-[250px] rounded-lg bg-[#F7C797] flex flex-col justify-center gap-y-10">
                   <div className="w-[80px]">
@@ -104,7 +104,7 @@ function ThirdPartyIntegrations(props) {
                 </div>
               </div>
 
-              <div className="w-full lg:w-auto  flex lg:flex-row flex-col items-center gap-5">
+              <div className="w-full lg:w-auto  flex lg:flex-row flex-col items-center gap-7">
                 {/* Others */}
                 <div className="p-7 min-h-[250px] h-[250px] w-full md:w-[250px] md:min-w-[250px] rounded-lg bg-[#F9F9F9] flex flex-col justify-center gap-y-10">
                   <div className="w-[80px]">
@@ -127,9 +127,9 @@ function ThirdPartyIntegrations(props) {
 
           {/* Third party integrations */}
           <div className="flex lg:flex-row flex-col lg:justify-between gap-7 mt-7">
-            <div className="flex flex-col flex-wrap lg:flex-row items-center gap-5">
+            <div className="flex flex-col flex-wrap lg:flex-row items-center gap-7">
               {/* analytics */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[80px]">
                   <img
                     src={analytics}
@@ -139,7 +139,7 @@ function ThirdPartyIntegrations(props) {
                 </div>
               </div>
               {/* sendgrid */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[120px]">
                   <img
                     src={sendgrid}
@@ -149,32 +149,32 @@ function ThirdPartyIntegrations(props) {
                 </div>
               </div>
               {/* novu */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[100px]">
                   <img src={novu} alt="" className="w-full object-contain" />
                 </div>
               </div>
               {/* twilio */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[120px]">
                   <img src={twilio} alt="" className="w-full object-contain" />
                 </div>
               </div>
               {/* stripe */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[95px]">
                   <img src={stripe} alt="" className="w-full object-contain" />
                 </div>
               </div>
               {/* paypal */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[120px]">
                   <img src={paypal} alt="" className="w-full object-contain" />
                 </div>
               </div>
 
               {/* paystack */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[140px]">
                   <img
                     src={paystack}
@@ -184,7 +184,7 @@ function ThirdPartyIntegrations(props) {
                 </div>
               </div>
               {/* flutterwave */}
-              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[300px] md:min-w-[300px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
+              <div className="p-7 min-h-[180px] h-[180px] w-full md:w-[260px] md:min-w-[260px] rounded-lg bg-gradient-to-tr from-[#F9F9F9] to-[#FCFCFC] flex flex-col items-center justify-center gap-y-10">
                 <div className="w-[160px]">
                   <img
                     src={flutterwave}

@@ -284,7 +284,7 @@ function NewProjectForm() {
         )}
       </div>
 
-      <button className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 border-black bg-transparent h-24 w-full lg:w-1/2 rounded-full">
+      <button className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 border-black hover:bg-gethsemaneRed hover:border-transparent hover:text-[#FFF] bg-transparent transition-all h-24 w-full lg:w-1/2 rounded-full">
         Send request
       </button>
     </form>

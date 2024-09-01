@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 // Images
-import pageNotFoundGraphics from "../../assets/images/404.svg";
+// import pageNotFoundGraphics from "../../assets/images/404.svg";
 
 function PageNotFound() {
   const scrollRef = useRef(null);
@@ -32,19 +32,19 @@ function PageNotFound() {
       <NavBar />
       <div className="min-h-screen bg-[#FFF] text-gethsemaneBlack overflow-hidden pt-20 p-7 lg:px-14 pb-20 lg:pb-48 relative top-20">
         <div className="flex flex-col gap-y-4 items-center w-full">
-          <img
+          {/* <img
             src={pageNotFoundGraphics}
             alt=""
             className="opacity-0 lg:max-w-[18%] lg:w-[18%] max-w-[200px] w-[200px] object-contain lg:opacity-80"
-          />
+          /> */}
 
           <Fade duration={1000}>
-          <h2 className="lg:text-[3rem] text-3xl font-semibold w-full lg:max-w-3xl text-center mt-12 leading-[40px] lg:leading-[50px]">
-            Oops! We couldn't find the page you are looking for
-          </h2>
+            <h2 className="lg:text-[3rem] text-3xl font-semibold w-full lg:max-w-3xl text-center mt-12 leading-[40px] lg:leading-[50px]">
+              Oops! We couldn't find the page you are looking for
+            </h2>
           </Fade>
 
-          <div className="mt-8 w-full flex lg:flex-row flex-col gap-5 items-center justify-center">
+          <div className="relative z-50 mt-8 w-full flex lg:flex-row flex-col gap-5 items-center justify-center">
             <Fade direction="up" className="lg:w-52 w-[70%]" duration={1000}>
               <Link
                 to="/"
@@ -61,7 +61,7 @@ function PageNotFound() {
               delay={300}
             >
               <Link
-                to="/"
+                to="/company/contact-us"
                 className="h-10 text-sm lg:w-52 w-full bg-gethsemaneRed text-white flex flex-row items-center justify-center p-3 rounded-full"
               >
                 Start my project

@@ -54,7 +54,7 @@ function NavBar(props) {
                       to="/company/contact-us"
                       className="text-md font-medium hover:text-gethsemaneRed transition-all"
                     >
-                      Start my project
+                      Build My Project
                     </Link>
                   </li>
 
@@ -63,16 +63,16 @@ function NavBar(props) {
                       to="/company/about-us"
                       className="text-md font-medium hover:text-gethsemaneRed transition-all"
                     >
-                      About us
+                      About Us
                     </Link>
                   </li>
 
                   <li>
                     <Link
-                      to="/company/blog"
+                      to="/case-studies"
                       className="text-md font-medium hover:text-gethsemaneRed transition-all"
                     >
-                      Blog
+                      Case Studies
                     </Link>
                   </li>
 
@@ -209,7 +209,7 @@ function NavBar(props) {
                     to="/company/contact-us"
                     className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
                   >
-                    Start my project
+                    Build My Project
                   </Link>
                   <Link
                     to="/company/about-us"
@@ -218,11 +218,17 @@ function NavBar(props) {
                     About us
                   </Link>
                   <Link
+                    to="/case-studies"
+                    className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
+                  >
+                    Case Studies
+                  </Link>
+                  {/* <Link
                     to="/company/blog"
                     className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
                   >
                     Blog
-                  </Link>
+                  </Link> */}
                   <Link
                     to="mailto:@gethsemanestech@gmail.com"
                     className="text-2xl font-medium hover:translate-x-1 text-gethsemaneRed"
