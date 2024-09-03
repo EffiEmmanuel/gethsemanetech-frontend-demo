@@ -136,15 +136,19 @@ function CaseStudiesPage() {
           </div>
         </div>
 
-        <div className="lg:px-7 w-full flex flex-row justify-center items-center gap-x-3 mt-14">
+        <div className="lg:px-7 w-full flex flex-row md:justify-center items-center gap-x-3 mt-14">
           <Link
             to="/company/contact-us"
-            className="w-full lg:w-auto flex flex-row justify-center items-center gap-x-3 text-gethsemaneRed lg:text-[4rem] text-2xl p-7 h-32 rounded-full"
+            className="w-full lg:w-auto flex flex-row md:justify-center justify-between items-center gap-x-3 text-gethsemaneRed lg:text-[4rem] text-2xl lg:p-7 h-32 rounded-full"
           >
             <span>Let's build your next project</span>
             <FaArrowRight
               size={24}
-              className="text-gethsemaneRed animate-bounce"
+              className="text-gethsemaneRed animate-bounce hidden lg:inline-block"
+            />
+            <FaArrowRight
+              size={18}
+              className="text-gethsemaneRed animate-bounce lg:hidden inline-block"
             />
           </Link>
         </div>
