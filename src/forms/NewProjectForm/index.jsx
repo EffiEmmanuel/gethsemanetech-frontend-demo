@@ -1,5 +1,9 @@
 import React, { useRef, useState } from "react";
 import { MdLink } from "react-icons/md";
+import useFetch from "../../hooks/useFetch";
+import axios from "axios";
+import { Fade } from "react-awesome-reveal";
+import { Toast, toast } from "sonner";
 
 function NewProjectForm() {
   // Client interest states
@@ -31,7 +35,95 @@ function NewProjectForm() {
     }
   };
 
-  return (
+  // Form fields
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [projectDescription, setProjectDescription] = useState();
+  const [areasOfInterest, setAreasOfInterest] = useState([]);
+  const [clientBudget, setClientBudget] = useState();
+  const [attachment, setAttachment] = useState();
+
+  // Loading state
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasEmailSent, setHasEmailSent] = useState(false);
+
+  // Send inquiry request to the server
+  async function handleSendInquiry(e) {
+    setIsLoading(true);
+    e.preventDefault();
+    // Take all the boolean fields and put them in an object
+    // Loop from 0-n
+    // if the value at the index of the object key is true,
+    // Add the key to the array
+    const areasOfInterestObject = {
+      "Site from scratch": isSiteFromScratch,
+      "App from scratch": isAppFromScratch,
+      "UI/UX Design": isUIUXDesign,
+      "Web app development": isWebAppDevelopment,
+      Maintenance: isMaintenance,
+      Other: isOther,
+    };
+
+    // Use Object.entries for a cleaner iteration and avoid multiple Object.keys() calls
+    for (const [key, value] of Object.entries(areasOfInterestObject)) {
+      // Add key to areasOfInterest only if value is true and not already in the array
+      if (value === true && !areasOfInterest.includes(key)) {
+        areasOfInterest.push(key);
+      }
+    }
+
+    console.log("AREAS OF INTEREST:", areasOfInterest);
+
+    console.log(
+      firstName,
+      lastName,
+      email,
+      projectDescription,
+      areasOfInterest,
+      clientBudget
+    );
+    await axios
+      .post("https://api.gethsemanetech.com/v1/users/project/send-inquiry", {
+        firstName,
+        lastName,
+        email,
+        projectDescription,
+        areasOfInterest,
+        clientBudget,
+        attachment: attachment ?? null,
+      })
+      .then((response) => {
+        console.log("RESPONSE:", response.data);
+        setIsLoading(false);
+        setHasEmailSent(true);
+        toast("Message sent!", {
+          description:
+            "We have received your message and a member of our team will be in touch shortly.",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+      })
+      .catch((error) => {
+        console.log("ERROR:", error);
+        setIsLoading(false);
+      });
+  }
+
+  return hasEmailSent ? (
+    <div className="flex flex-col gap-y-2 mt-7">
+      <Fade duration={1000}>
+        <h2 className="lg:text-3xl text-2xl lg:leading-[60px]">
+          Thank you for your message!
+        </h2>
+      </Fade>
+      <Fade duration={1000}>
+        <p>A member of our team will be in touch with you shortly,</p>
+      </Fade>
+    </div>
+  ) : (
     <form className="flex flex-col gap-y-7 mt-7">
       <div className="">
         <h2 className="lg:text-3xl text-2xl lg:leading-[60px]">
@@ -130,6 +222,8 @@ function NewProjectForm() {
             name="firstName"
             id="firstName"
             placeholder="John"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
             className="h-16 p-4 bg-slate-200  text-[16px]"
           />
         </div>
@@ -142,6 +236,8 @@ function NewProjectForm() {
             name="lastName"
             id="lastName"
             placeholder="Doe"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
             className="h-16 p-4 bg-slate-200  text-[16px]"
           />
         </div>
@@ -155,6 +251,8 @@ function NewProjectForm() {
             type="email"
             name="emailAddress"
             id="emailAddress"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="johndoe@organization.com"
             className="h-16 p-4 bg-slate-200  text-[16px]"
           />
@@ -167,6 +265,8 @@ function NewProjectForm() {
             type="text"
             name="projectDescription"
             id="projectDescription"
+            value={projectDescription}
+            onChange={(e) => setProjectDescription(e.target.value)}
             placeholder="Tell us about your project"
             className="h-16 p-4 bg-slate-200  text-[16px]"
           />
@@ -182,6 +282,7 @@ function NewProjectForm() {
               onClick={(e) => {
                 e.preventDefault();
                 setIs1500To00(!is1500To3000);
+                setClientBudget("$1,500 - $3,000");
                 setIs3000To5000(false);
                 setIs5000To10000(false);
                 setIs10000To20000(false);
@@ -200,6 +301,7 @@ function NewProjectForm() {
                 e.preventDefault();
                 setIs1500To00(false);
                 setIs3000To5000(!is3000To5000);
+                setClientBudget("$3,000 - $5,000");
                 setIs5000To10000(false);
                 setIs10000To20000(false);
                 setIs20000AndAbove(false);
@@ -218,6 +320,7 @@ function NewProjectForm() {
                 setIs1500To00(false);
                 setIs3000To5000(false);
                 setIs5000To10000(!is5000To10000);
+                setClientBudget("$5,000 - $10,000");
                 setIs10000To20000(false);
                 setIs20000AndAbove(false);
               }}
@@ -234,6 +337,7 @@ function NewProjectForm() {
                 e.preventDefault();
                 setIs1500To00(false);
                 setIs10000To20000(!is10000To20000);
+                setClientBudget("$10,000 - $20000");
                 setIs3000To5000(false);
                 setIs5000To10000(false);
                 setIs20000AndAbove(false);
@@ -254,6 +358,7 @@ function NewProjectForm() {
                 setIs5000To10000(false);
                 setIs10000To20000(false);
                 setIs20000AndAbove(!is20000AndAbove);
+                setClientBudget("$20,000 and above");
               }}
               className={` h-10 flex items-center justify-center flex-row w-auto p-4 transition-all ${
                 is20000AndAbove
@@ -284,7 +389,10 @@ function NewProjectForm() {
         )}
       </div>
 
-      <button className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 border-black hover:bg-gethsemaneRed hover:border-transparent hover:text-[#FFF] bg-transparent transition-all h-24 w-full lg:w-1/2 rounded-full">
+      <button
+        onClick={(e) => handleSendInquiry(e)}
+        className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 border-black hover:bg-gethsemaneRed hover:border-transparent hover:text-[#FFF] bg-transparent transition-all h-24 w-full lg:w-1/2 rounded-full"
+      >
         Send request
       </button>
     </form>

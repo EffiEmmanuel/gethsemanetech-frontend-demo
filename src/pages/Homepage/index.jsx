@@ -81,7 +81,7 @@ export default function Homepage() {
             <div className="mt-8 w-full flex lg:flex-row flex-col gap-5 items-center justify-center">
               <Fade direction="up" className="lg:w-52 w-[70%]" duration={1000}>
                 <Link
-                  to="/"
+                  to="/case-studies"
                   className="h-10 text-sm lg:w-52 w-full border-[1.8px] flex flex-row items-center justify-center border-black p-3 rounded-full"
                 >
                   Learn more
@@ -95,7 +95,7 @@ export default function Homepage() {
                 delay={300}
               >
                 <Link
-                  to="/"
+                  to="/company/contact-us"
                   className="h-10 text-sm lg:w-52 w-full bg-gethsemaneRed text-white flex flex-row items-center justify-center p-3 rounded-full"
                 >
                   Get a quote
@@ -147,9 +147,12 @@ export default function Homepage() {
               mobile and web development. */}
 
               <Fade duration={700}>
-                <button className="mt-8 lg:mt-4 border-2 border-white bgansparent h-24 w-full lg:w-1/2 rounded-full">
-                  How we work
-                </button>
+                <Link
+                  to="/company/contact-us"
+                  className="mt-8 lg:mt-4 border-2 flex items-center justify-center hover:bg-gethsemaneRed hover:text-white transition-all hover:border-transparent border-white bgansparent h-24 w-full lg:w-1/2 rounded-full"
+                >
+                  Let's build your project
+                </Link>
               </Fade>
             </div>
           </div>
@@ -304,14 +307,14 @@ export default function Homepage() {
                         </div>
                         <div className="w-full flex lg:flex-row flex-col gap-y-5 gap-x-10 lg:items-center">
                           <Link
-                            to="/"
-                            className="h-10 text-sm lg:w-52 w-full border-[1.8px] flex flex-row items-center justify-center border-black p-3 rounded-full"
+                            to="/case-studies/shuttlelane"
+                            className="h-10 hover:bg-gethsemaneRed transition-all hover:text-white hover:border-transparent text-sm lg:w-52 w-full border-[1.8px] flex flex-row items-center justify-center border-black p-3 rounded-full"
                           >
                             Case study
                           </Link>
                           <Link
-                            to="/"
-                            className="h-10 text-sm lg:w-52 w-full bg-gethsemaneRed text-white flex flex-row items-center justify-center p-3 rounded-full"
+                            to="https://www.shuttlelane.com"
+                            className="h-10 text-sm lg:w-52 w-full bg-gethsemaneRed text-white flex flex-row items-center justify-center p-3 rounded-full hover:border-gethsemaneBlack hover:border-[1.8px] transition-all hover:text-black hover:bg-transparent"
                           >
                             View project
                           </Link>
