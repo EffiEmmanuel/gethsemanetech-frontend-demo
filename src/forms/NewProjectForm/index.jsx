@@ -3,7 +3,7 @@ import { MdLink } from "react-icons/md";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { Fade } from "react-awesome-reveal";
-import { Toast, toast } from "sonner";
+import { Toaster, toast } from "sonner";
 
 function NewProjectForm() {
   // Client interest states
@@ -97,13 +97,10 @@ function NewProjectForm() {
         console.log("RESPONSE:", response.data);
         setIsLoading(false);
         setHasEmailSent(true);
-        toast("Message sent!", {
+        toast.success("Message sent!", {
           description:
             "We have received your message and a member of our team will be in touch shortly.",
-          action: {
-            label: "Undo",
-            onClick: () => console.log("Undo"),
-          },
+          position: "top-right",
         });
       })
       .catch((error) => {
@@ -114,6 +111,7 @@ function NewProjectForm() {
 
   return hasEmailSent ? (
     <div className="flex flex-col gap-y-2 mt-7">
+      <Toaster richColors />
       <Fade duration={1000}>
         <h2 className="lg:text-3xl text-2xl lg:leading-[60px]">
           Thank you for your message!
