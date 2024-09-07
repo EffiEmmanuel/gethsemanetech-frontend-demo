@@ -3,7 +3,8 @@ import { MdLink } from "react-icons/md";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { Fade } from "react-awesome-reveal";
-import { Toaster, toast } from "sonner";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { ImSpinner8 } from "react-icons/im";
 
 function NewProjectForm() {
@@ -86,7 +87,6 @@ function NewProjectForm() {
     );
     await axios
       .post("https://api.gethsemanetech.com/v1/users/project/send-inquiry", {
-        //   .post("http://localhost:3001/v1/users/project/send-inquiry", {
         firstName,
         lastName,
         email,
@@ -99,21 +99,22 @@ function NewProjectForm() {
         console.log("RESPONSE:", response.data);
         setIsLoading(false);
         setHasEmailSent(true);
-        toast.success("Message sent!", {
-          description:
-            "We have received your message and a member of our team will be in touch shortly.",
-          position: "top-right",
-        });
+        toast.success(
+          "We have received your message and a member of our team will be in touch shortly."
+        );
       })
       .catch((error) => {
         console.log("ERROR:", error);
+        toast.error(
+          "An error occured while we process your request. Please try again."
+        );
         setIsLoading(false);
       });
   }
 
   return hasEmailSent ? (
     <div className="flex flex-col gap-y-2 mt-7">
-      <Toaster richColors />
+      <ToastContainer position="top-right" hideProgressBar />
       <Fade duration={1000}>
         <h2 className="lg:text-3xl text-2xl lg:leading-[60px]">
           Thank you for your message!
