@@ -4,6 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { Fade } from "react-awesome-reveal";
 import { Toaster, toast } from "sonner";
+import { ImSpinner8 } from "react-icons/im";
 
 function NewProjectForm() {
   // Client interest states
@@ -85,6 +86,7 @@ function NewProjectForm() {
     );
     await axios
       .post("https://api.gethsemanetech.com/v1/users/project/send-inquiry", {
+        //   .post("http://localhost:3001/v1/users/project/send-inquiry", {
         firstName,
         lastName,
         email,
@@ -389,9 +391,13 @@ function NewProjectForm() {
 
       <button
         onClick={(e) => handleSendInquiry(e)}
-        className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 border-black hover:bg-gethsemaneRed hover:border-transparent hover:text-[#FFF] bg-transparent transition-all h-24 w-full lg:w-1/2 rounded-full"
+        className="mt-4 lg:text-lg text-sm border-[1.5px] lg:border-2 flex items-center justify-center border-black hover:bg-gethsemaneRed hover:border-transparent hover:text-[#FFF] bg-transparent transition-all h-24 w-full lg:w-1/2 rounded-full"
       >
-        Send request
+        {isLoading ? (
+          <ImSpinner8 size={18} className="animate-spin" />
+        ) : (
+          "Send request"
+        )}
       </button>
     </form>
   );
