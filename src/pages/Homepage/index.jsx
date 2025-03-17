@@ -49,7 +49,7 @@ export default function Homepage() {
           <div className="absolute inset-0 min-h-screen w-full -top-[50%] overflow-hidden flex items-center justify-center">
             <GridLines />
           </div>
-          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[80vh] mt-12 lg:relative lg:top-20">
+          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[70vh] mt-12 lg:relative lg:top-20">
             <Fade
               duration={1000}
               direction="up"
@@ -111,7 +111,7 @@ export default function Homepage() {
 
         <div data-scroll-section className="bg-[#FFF]">
           {/* About section */}
-          <div className="min-h-screen lg:min-h-[800px] relative -top-44 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-tr-[30px] rounded-tl-[30px] w-full pt-24 p-7 lg:px-14">
+          <div className="min-h-screen lg:min-h-[800px] relative -top-32 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-tr-[30px] rounded-tl-[30px] w-full pt-24 p-7 lg:px-14">
             <div className="lg:w-[50%] lg:inline-block hidden overflow-hidden">
               <Fade duration={700}>
                 <video
