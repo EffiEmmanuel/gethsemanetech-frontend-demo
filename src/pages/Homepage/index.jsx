@@ -16,6 +16,7 @@ import NewProjectForm from "../../forms/NewProjectForm";
 import LocomotiveScroll from "locomotive-scroll";
 import ThirdPartyIntegrations from "../../components/ThirdPartyIntegrations";
 import TechStack from "../../components/TechStack";
+import { GridLines } from "../../components/UI/GridLines";
 
 MouseFollower.registerGSAP(gsap);
 const cursor = new MouseFollower();
@@ -45,7 +46,10 @@ export default function Homepage() {
       <div className="mt-28 lg:mt-16">
         {/* Hero section */}
         <div className="relative w-full overflow-hidden">
-          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[70vh] mt-12 lg:relative lg:top-20">
+          <div className="absolute inset-0 min-h-screen w-full -top-[50%] overflow-hidden flex items-center justify-center">
+            <GridLines />
+          </div>
+          <div className="w-full text-center px-7 lg:px-14 min-h-[65vh] lg:min-h-[80vh] mt-12 lg:relative lg:top-20">
             <Fade
               duration={1000}
               direction="up"
@@ -57,14 +61,14 @@ export default function Homepage() {
               </h1>
             </Fade>
             <Fade duration={1000} className="lg:-mt-5">
-              <h1 className="font-medium lg:text-[3rem] text-[1.8rem]">
+              <h1 className="font-medium lg:text-7xl text-[2.5rem]">
                 We are a{" "}
                 <span className="font-medium text-[#ED2A6C]">Software</span>{" "}
                 <span className="italic font-medium">design</span>
               </h1>
             </Fade>
-            <Fade duration={1000} className="lg:-mt-10">
-              <h1 className="font-medium lg:mt-7 lg:text-[3rem] text-[1.8rem]">
+            <Fade duration={1000} className="lg:-mt-4">
+              <h1 className="font-medium lg:mt-7 lg:text-7xl text-[2.5rem]">
                 and <span className="italic font-medium">development</span>{" "}
                 agency
               </h1>
@@ -107,7 +111,7 @@ export default function Homepage() {
 
         <div data-scroll-section className="bg-[#FFF]">
           {/* About section */}
-          <div className="min-h-screen lg:min-h-[800px] relative -top-32 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-tr-[30px] rounded-tl-[30px] w-full pt-24 p-7 lg:px-14">
+          <div className="min-h-screen lg:min-h-[800px] relative -top-44 bg-black flex gap-x-24 flex-row items-center justify-between text-white mt-20 rounded-tr-[30px] rounded-tl-[30px] w-full pt-24 p-7 lg:px-14">
             <div className="lg:w-[50%] lg:inline-block hidden overflow-hidden">
               <Fade duration={700}>
                 <video
