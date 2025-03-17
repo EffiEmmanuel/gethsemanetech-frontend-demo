@@ -61,14 +61,14 @@ export default function Homepage() {
               </h1>
             </Fade>
             <Fade duration={1000} className="lg:-mt-5">
-              <h1 className="font-medium lg:text-7xl text-[2.5rem]">
+              <h1 className="font-medium lg:text-7xl text-[1.8rem]">
                 We are a{" "}
                 <span className="font-medium text-[#ED2A6C]">Software</span>{" "}
                 <span className="italic font-medium">design</span>
               </h1>
             </Fade>
             <Fade duration={1000} className="lg:-mt-4">
-              <h1 className="font-medium lg:mt-7 lg:text-7xl text-[2.5rem]">
+              <h1 className="font-medium lg:mt-7 lg:text-7xl text-[1.8rem]">
                 and <span className="italic font-medium">development</span>{" "}
                 agency
               </h1>
