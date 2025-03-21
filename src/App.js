@@ -13,6 +13,8 @@ import PageNotFound from "./pages/404PageNotFound";
 import AdminLoginPage from "./pages/admin/LoginPage";
 import AdminDashboardHomePage from "./pages/admin/dashboard";
 import CaseStudyPage from "./pages/CaseStudies/[case-study]";
+import DesignRushBlogPost from "./pages/blog/gethsemane-technologies-recognized-by-designrush-for-excellence-in-web-design";
+import BlogsPage from "./pages/blog";
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
         <Route path="/company">
           <Route path="contact-us" element={<StartMyProjectPage />} />
           <Route path="about-us" element={<AboutUsPage />} />
+        </Route>
+
+        <Route path="/blog">
+          <Route path="" element={<BlogsPage />} />
+          <Route
+            path="gethsemane-technologies-recognized-by-designrush-for-excellence-in-web-design"
+            element={<DesignRushBlogPost />}
+          />
         </Route>
 
         {/* Admin routes */}

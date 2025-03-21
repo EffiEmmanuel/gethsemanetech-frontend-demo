@@ -15,7 +15,6 @@ import shuttlelaneLogo from "../../assets/images/projects/shuttlelane/logo.png";
 import NewProjectForm from "../../forms/NewProjectForm";
 import LocomotiveScroll from "locomotive-scroll";
 import ThirdPartyIntegrations from "../../components/ThirdPartyIntegrations";
-import TechStack from "../../components/TechStack";
 import { GridLines } from "../../components/UI/GridLines";
 
 MouseFollower.registerGSAP(gsap);

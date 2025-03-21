@@ -14,7 +14,7 @@ function NavBar(props) {
   const [detachAnimation, setDetachAnimation] = useState(false);
 
   // Menu states
-  const [isServicesActive, setIsServicesActive] = useState(false);
+  // const [isServicesActive, setIsServicesActive] = useState(false);
 
   return (
     <div className="relative z-[30] w-full px-7 lg:px-7 pt-7">
@@ -25,6 +25,7 @@ function NavBar(props) {
               <img
                 src={gethsemaneTechLogo}
                 className="max-w-[130px] w-[120px] lg:w-[130px] object-contain"
+                alt="Gethsemane Technologies LTD | Best software design and development agency"
               />
             </Link>
 
@@ -73,6 +74,15 @@ function NavBar(props) {
                       className="text-md font-medium hover:text-gethsemaneRed transition-all"
                     >
                       Case Studies
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      to="/blog"
+                      className="text-md font-medium hover:text-gethsemaneRed transition-all"
+                    >
+                      Blog
                     </Link>
                   </li>
 
@@ -183,7 +193,8 @@ function NavBar(props) {
               <div className="w-full flex items-center justify-between">
                 <img
                   src={gethsemaneTechLogo}
-                  className="max-w-[130px] w-[120px] lg:w-[130px]  object-contain"
+                  className="max-w-[130px] w-[120px] lg:w-[130px] object-contain"
+                  alt="Gethsemane Technologies LTD | Best software design and development agency"
                 />
 
                 <button className="focus:outline-none">
@@ -223,12 +234,12 @@ function NavBar(props) {
                   >
                     Case Studies
                   </Link>
-                  {/* <Link
-                    to="/company/blog"
+                  <Link
+                    to="/blog"
                     className="text-2xl font-medium hover:translate-x-1 hover:text-gethsemaneRed transition-all"
                   >
                     Blog
-                  </Link> */}
+                  </Link>
                   <Link
                     to="mailto:@gethsemanestech@gmail.com"
                     className="text-2xl font-medium hover:translate-x-1 text-gethsemaneRed"
